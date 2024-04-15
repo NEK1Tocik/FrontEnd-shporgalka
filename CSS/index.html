@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML + CSS</title>
+    <style>
+        i {
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="css/main.css"> <!--Третий способ подключения стилей-->
+</head>
+<body>
+    <p style="color: red;">1-й вариант подключения стилей css</p>
+    <p>2-й вариант <i>подключения стилей</i> css</p>
+
+    <p class="main_text">Применение стилей через класс</p>
+    <p id="text_in_p">Применение стилей через идентификатор (id)</p> <!--На странице не допускается использовать одинковые Id-->
+    
+    <div>
+        <p>Применение <b>стилей к тегам</b> с конкретизацией <i>через вложенность</i></p>
+    </div>
+
+    <a href="#" class="main_link">Работа с псевдоклассами в ссылках</a>
+    <p class="main_link">Работа с псевдоклассами в тексте абзаца</p>
+
+    <input type="text" placeholder="Введите текст">
+    <input type="text" placeholder="Введите текст забловированно" disabled>
+    <input type="text" placeholder="Обязательное поле" required>
+
+    <p class="text">Применение стилей к не пустым абзацам</p>
+    <p class="text"></p>
+
+    <div id="some_id">
+        Работа с псевдоэлементами
+        <p class="text2">Абзац не пусто с элементом после</p>
+        <p class="text2" title="Some"></p>
+    </div>
+
+    <p class="str_elem_letter">Применение стилей к первой букве</p>
+    <p class="str_elem_line">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur corporis odit tenetur, deleniti sunt non totam. Incidunt asperiores placeat dignissimos blanditiis unde necessitatibus consequuntur voluptates maiores enim recusandae. Accusamus, corporis.</p>
+
+    <div>
+        <p>1-я строка</p>
+        <p>2-я строка</p>
+    </div>
+
+    <p>Текст какой-то</p>
+
+    <div id="first">
+        <p class="first_text"> Работа с текстом</p>
+    </div>
+    <div id="second">    </div>
+
+    <div id="block">
+        Работа с блоком div<br>
+        Внутренний элемент
+    </div>
+    <span id="block2">
+        Работа с блоком span
+    </span>
+
+    <div id="three" class="block3"></div>
+    <div id="four" class="block3"></div>
+
+</body>
+</html>

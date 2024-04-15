@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <!--ОБРАБОТЧИК СОБЫТИЙ-->
+    <button onclick="alert('вы нажали на меня')">Нажми на меня</button> <!--кнопка которая вызывает всплывающее окно с сообщением-->
+    <button onclick="alert(onClickButton())">Нажми на меня 2</button> <!--кнопка которая вызывает всплывающее окно с сообщением из js файл, 
+        где onclick атрибут действие при нажатии на элемент можно применять к любым тэгам-->
+    <button ondblclick ="alert('вы нажали на меня')">Нажми на меня3</button> <!--кнопка которая вызывает всплывающее окно с сообщением, 
+         где ondblclick атрибут действие при двойном нажатии на элемент, можно применять к любым тэгам-->
+    <button onmouseover ="alert('вы нажали на меня')">Нажми на меня4</button> <!--кнопка которая вызывает всплывающее окно с сообщением, 
+        где onmouseover атрибут действие при наведении на элемент, можно применять к любым тэгам-->
+    <button onmouseout ="alert('вы нажали на меня')">Нажми на меня5</button> <!--кнопка которая вызывает всплывающее окно с сообщением, 
+        где onmouseover атрибут действие при уведении курсора с элемент, можно применять к любым тэгам-->    
+    <button name="mainButton" onclick="onClickButton2(this)">Считаем количество нажатий</button> <!--кнопка для подсчет нажатия по ней, где this это параметр который передает данный тэг-->
+    <input type="text" oninput="onInput(this)">
+
+    <!--ФОРМА И ЕЕ ОБРАБОТКА-->
+    <p id="text" title="Атрибут title">TEXT</p>
+
+    <span class="simple-text">TEXT 1</span>
+    <span class="simple-text">TEXT 2</span>
+    <span class="simple-text">TEXT 3</span>
+    
+    <form action="" id="main_form" method="post"> <!--onsubmit обработчик события нажатия на кнопку находящейся внутри формы-->
+        <label for="name">Имя:</label>
+        <input type="text" name="name" placeholder="Имя" id="name"><br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" name="pass" placeholder="Пароль" id="pass"><br><br>
+        <label for="repass">Проверка пароля:</label>
+        <input type="password" name="repass" placeholder="Проверка пароля" id="repass"><br><br>
+        <span>Пол:</span>
+        <input type="radio" name="state" id="male" value="Мужской">
+        <label for="male">Мужской</label>
+        <input type="radio" name="state" id="femail" value="Женский">
+        <label for="female">Женский</label><br><br>
+        <div id="Error" style="color: red;"></div>
+        <input type="submit"  name="submit" value="Готово"><br><br> <!--submit тип кнопка при нажатии вызывается перезагрузка страницы-->
+    </form>
+
+    <noscript>Включите JS</noscript> <!--Выводится в случае, если JS отключен-->
+    <!--Тэг для подключения JS кода или файла, обычно располагают в конце HTML файла-->
+    <script src="js_scripts/main.js"> </script>
+</body>
+</html>

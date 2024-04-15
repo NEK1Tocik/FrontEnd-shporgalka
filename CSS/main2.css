@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#some_block{
+    background: red;
+    color: #fff;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%; /*Радиус рамки*/
+    position: absolute; /*Позиционирование блока относительно всей страницы целиком*/
+    left: 20px; /*Отступ слева*/
+    top: 45px; /*Отступ сверху*/
+}
+
+#header, #footer{
+    width: 100%; /*Ширина*/
+    height: 70px; /*высота*/
+    text-align: center; /*Выравнивание содержимого внутри*/ 
+    border-bottom: 4px solid silver; /*Граница снизу*/
+    background: #333; /*Фоновой цвет*/
+    color: white; /*Цвет текста*/
+    line-height: 70px; /*Если величина совпадает с height, то содержимое будет располагаться идеально по центру*/
+    margin-bottom: 20px; /*Отсутп от блока снизу*/
+    float: left; /*Привязка к левому краю*/
+}
+
+#nav{
+    list-style: none; /*Тип стиля нумератров (без стиля, т.е. без цифр, кружочков и т.п.)*/
+    display: block; 
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#nav li{
+    display: inline; /*Тип расположения элементов списка (столбик, строка, ...)*/
+    background: #fafafa; /*Цвет фона*/
+    border: 1px solid silver; /*Рамка (толщина, тип линии, цвет линии)*/
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+#nav li:hover{
+    color: #fff;
+    background: #333;
+    border-radius: 5px;
+    border-color: #333;
+}
+
+#nav li:not(:last-of-type){
+    margin-right: 20px;
+}
+
+#main{
+    width: 50%; /**/
+    margin-left: 10%; /*Отсутп от блока слева*/
+    background: #fafafa; /*Цвет фона*/
+    border: 1px solid silver; /*Рамка (толщина, тип линии, цвет линии)*/
+    padding: 20px 2.5%; /*Отсутпы содержимого открая, внутри*/
+    float: left; /*Привязка к левому краю*/
+    position: relative;
+    z-index: 1; /*Назначение номера слоя для прорисовки объектов, обязательно наличие position*/
+}
+
+#aside{
+    width: 20%; /*Ширина*/
+    padding: 20px 2.5%; /*Отсутпы содержимого открая, внутри*/
+    margin-left: 5%; /*Отсутп от блока слева*/
+    background: #fafafa; /*Цвет фона*/
+    border: 1px solid silver; /*Рамка (толщина, тип линии, цвет линии)*/
+    float: left; /*Привязка к левому краю*/
+    position: relative; /*Позиционирование блока относительно точки*/
+        bottom: -5px; /*Смещение блока вниз*/
+        left: -100px; /*Смещение блока влево*/
+    z-index: 0; /*Назначение номера слоя для прорисовки объектов, обязательно наличие position*/
+}
+
+#footer{
+    margin-bottom: 0; /*Отсутп от блока снизу*/
+    margin-top: 20px; /*Отсутп от блока сверху*/
+    border-bottom: 0; /*Граница снизу*/
+    border-top: 4px solid silver; /*Граница сверху*/
+    float: left; /*Привязка к левому краю*/
+}

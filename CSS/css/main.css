@@ -1,0 +1,196 @@
+/*CSS селекторы*/
+
+body { /*Подключени стиля по тегу html*/
+    font-size: large;
+}
+
+.main_text { /*Применение стилей через класс*/
+    color: red;
+}
+
+ #text_in_p{ /*Применение стилей через идентификатор (id)*/
+    color: blue;
+ }
+
+ div b, div i { /*Применение стилей к тегам с конкретизацией через вложенность*/
+    color: rgb(39, 111, 174);
+ }
+
+ /*ПСЕВДОКЛАССЫ*/
+ .main_link{ /*обращение по классу*/
+    color: red;
+    text-decoration: underline; /*Подчеркнутый снизу текст*/
+ }
+
+.main_link:hover{ /*Псевдокласс класса main_link при наведении*/
+    color: blue;
+    text-decoration: overline; /*Подчеркнутый сверху текст*/
+    text-decoration-color: green;
+    cursor: pointer; /*Применение типа курсора*/
+} 
+
+.main_link:active{ /*Псевдокласс класса main_link при нажатии*/
+    text-decoration: line-through; /*Текст перечеркнутыЙ*/
+}
+
+.main_link:visited{ /*Псевдокласс класса main_link после нажатия*/
+    color: blueviolet;
+}
+
+input{ /*Применение стилей к тегу input в неактивном состоянии*/
+    color: red;
+} 
+input:focus{ /*Псевдокласс по тегу input когда поле в активном состоянии*/
+    color: blue;
+}
+input:disabled{ /*Псевдокласс по тегу input, для заблокированных полей*/
+    text-decoration: line-through;
+}
+input:required{ /*Псевдокласс по тегу input, для обязательных полей*/
+    color: rgb(86, 214, 234);
+}
+p.text:empty{ /*Применение стилей к абзацам с классом text пустым*/
+    color: gray;
+} 
+p.text:not(:empty){ /*Применение стилей к абзацам с классом text не пустым*/
+    color: pink;
+}
+
+/*ПСЕВДОЭЛЕМЕНТЫ*/
+#some_id::after{
+    color: red;
+    content: "123"; /*Свойство обычно применяется к after или before*/
+}
+
+p.text2:not(:empty)::after{ /*Применение стилей после абзаца с не пустым классом text2 */
+    color: gray;
+    content: "321";
+}
+
+p.text2:empty::after{ /*Применение стилей после абзаца с пустым классом text2 к title*/
+    content: attr(title); 
+}
+
+p.str_elem_letter::first-letter{
+    color: aqua;
+}
+
+p.str_elem_line::first-line{
+    color: aqua;
+}
+
+div p:first-of-type{
+    color: greenyellow;
+}
+
+p:last-of-type{
+    text-decoration: line-through;
+}
+
+/*Работа с задним фоном*/
+
+body {
+    /*background-color: blanchedalmond; /*Цвет фона*/
+    /*color: black;
+    background-image: url('https://sotni.ru/wp-content/uploads/2023/08/krasivyi-zadnii-fon-27.webp');
+    /*ЗАгрузка фоновой картинки*/
+    /*background-repeat: no-repeat; /*Запрет на повторение картинки на странице*/
+    /*background-position: center; /*Центрирование фонового изображения*/
+
+    background: #74fcf1 /*Общий цвет текста*/
+                url('https://sotni.ru/wp-content/uploads/2023/08/krasivyi-zadnii-fon-27.webp') /*Адрес фоновой картинки*/
+                no-repeat /*Запрет на повторение фонвой картинки*/
+                center /*Центрировать фоновое изображение по горизонтали*/
+                center; /*Центрировать фоновое изображение по вертикали*/
+    height: 100vh; /*Задать высоту vh экрана*/
+    background-size: cover; /*Растянуть на всю ширину и высоту блока*/
+    background-attachment: fixed; /**/
+}
+
+#first{
+    background: rgb(46, 30, 30)
+        url(https://static-cse.canva.com/blob/759807/vk1776.png)
+        no-repeat
+        center
+        center;
+    height: 250px;
+    background-size: cover;
+    background-attachment: fixed; /*Картинка зафиксирована в рамках блока и не двигается*/
+}
+
+#second{
+    height: 250px;
+}
+
+/*РАБОТА С ТЕСТОМ*/
+/*импорт шрифтов - fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+.first_text{
+    color: rgb(33, 28, 21);
+    text-align: center; /*Расположение текста по центру*/
+    text-decoration: none;
+    font-size: 50px; /*Размер шрифта*/
+    font-style: italic; /*Стиль текста (о наклоном)*/
+    font-weight: 900; /*Жирность шрифта*/
+    font-family: 'Playfair+Display' ; /*Задать шрифт*/
+
+    text-transform: lowercase; /*тип написания шрифта (большими, маленькими, ...)*/
+    word-spacing: 20px; /*пространство между словами*/
+    letter-spacing: 2px; /*пространство между словами*/
+    line-height: 50px; /*расстояние между строчками*/
+}
+
+/*РАБОТА С БЛОКАМИ*/
+* {
+    margin: 0;
+    padding: 0;
+}
+#block{
+    background: red;
+    height: 100px; /*100vh это 100% высоты экрана*/
+    width: 300px; /**/
+    border: 2px dashed blue; /*рамка блока - толщина, тип, цвет линии*/
+    border-bottom: 3px solid green; /*нижняя рамка блока - толщина, тип, увет линии*/
+    border-right-style:double;
+    border-radius: 10px 10px 10px 10px; /*Скругление углов блока радиусы*/
+    opacity: 0.8; /*Прозрачность фона объекта*/ 
+    margin: 20px; /*Внешний отступ вокруг элемента*/
+    padding: 20px; /*Внутренние отступы от края до внутреннего содержимого*/
+}
+
+#block2{
+    background: rgb(106, 180, 240);
+    border: 2px dashed blue; /*рамка блока - толщина, тип, цвет линии*/
+    border-bottom: 3px solid green; /*нижняя рамка блока - толщина, тип, увет линии*/
+    border-right-style:double;
+    border-radius: 10px 10px 10px 10px; /*Скругление углов блока радиусы*/
+    opacity: 0.8; /*Прозрачность фона объекта*/ 
+    margin: 20px; /*Внешний отступ вокруг элемента*/
+    padding: 20px; /*Внутренние отступы от края до внутреннего содержимого*/
+    display: block; /*тип отображения*/
+}
+
+/*ПОЗИЦИОНИРОВАНИЕ ОБЪЕКТОВ*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.block3{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background: gold;
+}
+
+#three{
+    float: left; /*выравнивание блока по левой стороне, а остальные его обтекают*/
+    opacity: 0.8;
+}
+
+#four{
+    float: left;
+    opacity: 0.8;
+    background: blue;
+}
